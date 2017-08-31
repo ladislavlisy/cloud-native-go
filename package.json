@@ -1,0 +1,18 @@
+{
+  "name": "example-goreact",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "vscode_exec": "BUILD_APP_PATH=example-go-react && cd src/github.com/ladislavlisy/$BUILD_APP_PATH && go build && ./$BUILD_APP_PATH",
+    "build": "cd src/github.com/ladislavlisy/$BUILD_APP_PATH && go build",
+    "start": "cd src/github.com/ladislavlisy/$BUILD_APP_PATH && ./$BUILD_APP_PATH",
+    "exec": "cd src/github.com/ladislavlisy/$BUILD_APP_PATH && go build && ./$BUILD_APP_PATH"
+  },
+  "author": "Ladislav Lisy",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-go": "^1.1.0",
+    "gulp-run-command": "0.0.9"
+  }
+}

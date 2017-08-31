@@ -1,0 +1,44 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "vscode_exec",
+            "problemMatcher": [
+                "$eslint-stylish"
+            ]
+        },
+        {
+            "taskName": "Build GO",
+            "type": "shell",
+            "command": "go build",
+            "osx": {
+                "options": {
+                    "cwd": "${workspaceRoot}/src/github.com/ladislavlisy/example-go-react"
+                }
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "taskName": "Execute GO",
+            "type": "shell",
+            "command": "./example-go-react",
+            "osx": {
+                "options": {
+                    "cwd": "${workspaceRoot}/src/github.com/ladislavlisy/example-go-react"
+                }
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
