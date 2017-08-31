@@ -46,6 +46,7 @@ START DOCKER
 $ docker-machine start default
 $ docker-machine env default
 $ eval $(docker-machine env default)
+$ env | grep DOCKER
 ```
 
 RUN DOCKER APP IMAGE
@@ -56,4 +57,12 @@ docker run -p 8080:8080 cloudnativego/book-hello
 TEST DOCKER APP
 ```shell
 curl http://192.168.99.100:8080 
+```
+
+INSTALL WERCKER CLI
+```shell
+brew tap wercker/wercker
+brew install wercker-cli
+--or--
+curl -L https://s3.amazonaws.com/downloads.wercker.com/cli/stable/darwin_amd64/wercker -o /usr/local/bin/wercker
 ```
